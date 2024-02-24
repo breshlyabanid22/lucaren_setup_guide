@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucaren | Setup Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="overflow-x-hidden prose">
+  <main class="flex justify-center w-screen bg-slate-600">
+      <div class="w-screen pt-8 mx-40 mt-4 mb-4 rounded-xl px-14 bg-slate-100">  
+        <header>
+          <h1 class="text-center"><i class="fa-brands fa-react fa-xl"></i>+<i class="fa-brands fa-python fa-xl"></i></h1>
+          <h1 class="inline mb-8">How to set up <h1 class="inline font-serif">Lucaren </h1><h1 class="inline">React-Django Project</h1>
+          <div class="p-0 mt-8">
+            <img src="public/pfp.jpg" alt="profile" class="inline m-0 mr-4 rounded-full">
+            <div class="inline">Breshly Abanid · <a href="https://www.facebook.com/breshly.abanid" target="_blank" class="text-blue-400 no-underline">Follow</a> 
+              | <a href="https://github.com/breshlyabanid22" target="_blank"><i class="fa-brands fa-github fa-lg" style="color: #24292e;"></i></a>
+              | <a href="https://www.linkedin.com/in/breshly-abanid-281558277" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #0077b5;"></i></a>
+            </div>
+          </div>
+          <hr class="my-4">
+          <div>
+            <blockquote class="font-medium">Hey guys, I made this step-by-step guide on how to set up the project. From installing
+              dependencies to configuring <code>Django</code> and integrating it to <code>React.</code>
+              I hope you find it helpful and easy to understand. Lezz goooo! (bitaw sunda lng ni guys.) 
+            </blockquote><hr class="border-t-2">  
+          </div>
+        </header>
+        
+        <section class="px-6 py-4 rounded-md mb-14 bg-slate-300">
+          <i class="fa-brands fa-react fa-lg"></i>+<i class="fa-brands fa-python fa-lg"></i>
+          <ol>
+            <li>
+              <h3>Download project or clone repository</h3>
+              <ul>
+                <li>  
+                  <p>First go to the project repository to download the project. 
+                    Click here: <a href="https://github.com/breshlyabanid22/Lucaren.git">Project repository</a></p>              
+                </li>
+                <li>
+                  <p>Or you can clone the project by using <mark>git clone</mark>.</p>
+                  <pre id="myInput1" class="relative flex items-center">git clone https://github.com/breshlyabanid22/Lucaren.git <i id="btn1" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>  
+                </li>
+              </ul>
+            </li><hr>
+            <li>
+              <h3>Installations and Configurations</h3>  
+              <ul>
+                <li>
+                  <p class="font-bold">Backend Installations:</p>
+                  <p>First, let's activate our virtual environment.</p>
+                  <ol>
+                    <li>Go to your backend directory. Then activate virtual env.</li>
+                    <pre id="myInput2" class="relative flex items-center">venv\Scripts\activate.bat<i id="btn2" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre></pre>
+                    <video autoplay loop muted class="rounded-md">
+                      <source src="public/video1.mp4" type="video/mp4">
+                      <source src="public/video1.mp4" type="video/ogg">
+                      Your browser does not support the video tag.
+                    </video>
+                    <li>Now, install the dependencies: 
+                      <code>djangorestframework, django-cors-headers and mysqlclient.</code></li>
+                      <pre id="myInput3" class="relative flex items-center">pip install djangorestframework <i id="btn3" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
+                      <pre id="myInput4" class="relative flex items-center">pip install django-cors-headers <i id="btn4" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
+                      <pre id="myInput5" class="relative flex items-center">pip install mysqlclient <i id="btn5" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
+                    <li>You can check the dependencies installed using<code>pip freeze</code>command.</li>
+                    <pre id="myInput6" class="relative flex items-center">pip freeze<i id="btn6" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
+                  </ol>
+                </li>
+                <li>
+                  <blockquote>Now that our virtual environment is activated, it's time to tweak our
+                    <code>settings.py</code> and configure our default database settings for this project.
+                  </blockquote>
+                  <p class="font-bold"><em>Settings.py</em> Configuration:</p>
+                  <ol>
+                    <li>
+                      <p>Inside the backend folder, go to <code>settings.py</code>.</p>
+                      <img src="public/ss1.png" alt="vs code snippet" class="rounded-md">
+                    </li>
+                    <li>
+                      <p>Scroll down and look for the <code>DATABASE</code>configuration as shown in the image below.</p>
+                      <img src="public/ss2.png" alt="vs code snippet" class="rounded-md">
+                      <blockquote>For this project, we're going to use <em class="font-semibold">mysql</em>
+                        for our default database. Change the values of <code>NAME, USER, PASSWORD, HOST, PORT</code>
+                        base on your mysql user settings.</blockquote>
+                    </li>   
+                  </ol>
+                </li>
+                <li>
+                  <p class="font-bold">Frontend Installations</p>
+                  <p>Let's install the dependencies.</p>
+                  <pre id="myInput6" class="relative flex items-center">npm install axios react-router-dom react-bootstrap bootstrap -D tailwindcss postcss autoprefixer<i id="btn6" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
+                  <blockquote>You can install multiple dependencies in one line like this.</blockquote>
+                </li>
+              </ul>
+            </li>
+            <li><hr>
+              <h3>Run the project</h3>
+              <ul>
+                <blockquote>Now that we've finished our set up, let's run the project.</blockquote>
+                <ol>
+                  <li>First, open your web server to start our database. In my case, I'm using <strong>XAMPP</strong>.</li>
+                  <img src="public/xampp_ss.png" alt="xampp" class="rounded-md">
+                  <blockquote>Start Apache and MySQL. Make sure you have a database named 'lucaren' in your mysql.</blockquote>
+                  <li>Next, open two command prompts in your development environment for <strong>frontend</strong> and <strong>backend</strong>.</li>
+                  <img src="public/ss3.png" alt="da">
+                  <blockquote>Note: To run the django server you should be in the backend directory.</blockquote>
+                  <img src="public/ss4.png" alt="da">
+                  <blockquote>Note: To run the react server you should be in the frontend directory.</blockquote>
+                  <li>Let's run the django server.</li>
+                    <blockquote>But first, we have to migrate our changes made in <code>settings.py</code> using these command lines.</blockquote>
+                    <p>You have to make migrations first using: </p>
+                    <pre>py manage.py makemigrations</pre>
+                    <p>Then migrate:</p>
+                    <pre>py manage.py migrate</pre>
+                    <video class="rounded-md" src="public/video2.mp4" autoplay muted loop></video>
+                    <p>Now, let's run the django server using the command line:</p>
+                    <pre>py manage.py runserver</pre>
+                    <video class="rounded-md" src="public/video3.mp4" autoplay muted loop ></video>
+                  <li>Finally, let's run the react server in the <strong>fronted</strong> directory/folder.</li>
+                  <blockquote>Run the server using: 'npm run dev'</blockquote>
+                  <pre>npm run dev</pre>
+                  <video class="rounded-md" src="public/video4.mp4" autoplay loop muted></video>
+                  <li>Go to the <strong>localhost:5173</strong> and now it should be up and running.</li>
+                  <video class="round-md" src="public/video5.mp4" autoplay loop muted></video>
+                  <blockquote>Lezzz goooooo!..</blockquote>
+                </ol>
+              </ul>
+            </li>
+          </ol>
+          <i class="fa-brands fa-react fa-lg"></i>+<i class="fa-brands fa-python fa-lg"></i>     
+        </section>
+        <hr>
+        <h1 class="text-center"><i class="fa-brands fa-react fa-xl"></i>+<i class="fa-brands fa-python fa-xl"></i></h1>
+      </div>
+  </main>
+</body>
+</html>
+<script>
+    function copyFunction(event) {
+      const buttonId = event.target.id;
+    let copyText;
+
+    // Depending on the button clicked, select the corresponding text content
+    switch(buttonId) {
+        case 'btn1':
+            copyText = document.getElementById("myInput1").textContent;
+            break;
+        case 'btn2':
+            copyText = document.getElementById("myInput2").textContent;
+            break;
+        case 'btn3':
+            copyText = document.getElementById("myInput3").textContent;
+            break;
+        case 'btn4':
+            copyText = document.getElementById("myInput4").textContent;
+            break;
+        default:
+            // Handle default case
+            break;
+    }
+
+    // Create a temporary textarea element to copy the text to clipboard
+    const textArea = document.createElement('textarea');
+    textArea.textContent = copyText;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea); // Clean up the textarea element
+  }
+
+  document.getElementById('btn1').addEventListener('click', copyFunction);
+  document.getElementById('btn2').addEventListener('click', copyFunction);
+  document.getElementById('btn3').addEventListener('click', copyFunction);
+  document.getElementById('btn4').addEventListener('click', copyFunction);
+</script>
