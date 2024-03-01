@@ -69,8 +69,9 @@
                       <pre id="myInput3" class="relative flex items-center justify-between">pip install djangorestframework <i id="btn3" class="sticky cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
                       <pre id="myInput4" class="relative flex items-center justify-between">pip install django-cors-headers <i id="btn4" class="sticky cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
                       <pre id="myInput5" class="relative flex items-center">pip install mysqlclient <i id="btn5" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
+                      <pre id="myInput6" class="relative flex items-center">pip install Pillow <i id="btn6" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
                     <li>You can check the dependencies installed using<code>pip freeze</code>command.</li>
-                    <pre id="myInput6" class="relative flex items-center">pip freeze<i id="btn6" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
+                    <pre id="myInput7" class="relative flex items-center">pip freeze<i id="btn7" class="absolute right-0 mr-4 cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
                   </ol>
                 </li>
                 <li>
@@ -89,13 +90,20 @@
                       <blockquote>For this project, we're going to use <em class="font-semibold">mysql</em>
                         for our default database. Change the values of <code>NAME, USER, PASSWORD, HOST, PORT</code>
                         base on your mysql user settings.</blockquote>
-                    </li>   
+                    </li>  
+                    <li>
+                      <p>Next, scroll down to <code>MEDIA_ROOT</code>, and change the value to your actual local root folder</p>
+                      <img src="public/media_dir_ss.png" alt="vs code snippet" class="rounded-md" loading="lazy">
+                      <p>You can do this by <strong>right-clicking</strong> on the <em>media</em> folder and click <strong>Copy Path</strong>.</p>
+                      <img src="public/media_dir_ss2.png" alt="vs code snippet" class="rounded-md" loading="lazy">
+                      <img src="public/media_dir_ss3.png" alt="vs code snippet" class="rounded-md" loading="lazy">
+                    </li> 
                   </ol>
                 </li>
                 <li>
                   <p class="font-bold">Frontend Installations</p>
                   <p>Let's install the dependencies.</p>
-                  <pre id="myInput6" class="relative flex items-center justify-between">npm install axios react-router-dom react-bootstrap bootstrap -D tailwindcss postcss autoprefixer<i id="btn6" class="static cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
+                  <pre id="myInput8" class="relative flex items-center justify-between">npm install axios react-router-dom react-bootstrap bootstrap -D tailwindcss postcss autoprefixer<i id="btn8" class="static cursor-pointer fa-regular fa-copy fa-lg hover:text-amber-400"></i></pre>
                   <blockquote>You can install multiple dependencies in one line like this.</blockquote>
                 </li>
               </ul>
@@ -161,6 +169,15 @@
         case 'btn4':
             copyText = document.getElementById("myInput4").textContent;
             break;
+        case 'btn5':
+          copyText = document.getElementById("myInput5").textContent;
+            break;
+        case 'btn6':
+          copyText = document.getElementById("myInput6").textContent;
+        case 'btn7':
+          copyText = document.getElementById("myInput7").textContent;
+        case 'btn8':
+          copyText = document.getElementById("myInput8").textContent;
         default:
             // Handle default case
             break;
@@ -179,4 +196,8 @@
   document.getElementById('btn2').addEventListener('click', copyFunction);
   document.getElementById('btn3').addEventListener('click', copyFunction);
   document.getElementById('btn4').addEventListener('click', copyFunction);
+  document.getElementById('btn5').addEventListener('click', copyFunction);
+  document.getElementById('btn6').addEventListener('click', copyFunction);
+  document.getElementById('btn7').addEventListener('click', copyFunction);
+  document.getElementById('btn8').addEventListener('click', copyFunction);
 </script>
